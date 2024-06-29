@@ -5,32 +5,38 @@ body {
   margin: 0px;
   padding: 40px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .main-container {
   display: flex;
   flex-direction: row;
   height: 100vh;
+  flex-wrap: wrap;
 }
 
 .left-block {
-  padding: 20px 70px 88px 70px;
+  padding: 10px 70px 88px 90px;
   text-align: left;
   margin: 1px;
   margin-right: 5px;
-  height: 100vh;
-  position: fixed;
-  overflow: hidden;
+  position: absolute;
   width: 650px; /* Adjust this width as needed */
 }
-
+.name{
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 60px;
+  letter-spacing: 1.9px;
+  margin-top: 50px;
+  margin-bottom: 16px;
+}
 .right-block {
-  margin-left: 750px; /* Adjust this width to match the left-block width */
+  margin-left: 700px; /* Adjust this width to match the left-block width */
   height: 100vh;
   overflow-y: scroll;
-  padding: 60px 70px 0 0;
+  padding-top: 60px;
+  padding-right: 32px;
   display: flex;
   flex-direction: column;
   width: 750px; /* Adjust this width to match the left-block width */
@@ -54,14 +60,20 @@ body {
 
 ul {
   list-style-type: none;
-  font-size: 20px;
+  font-size: 45px;
+  padding: 0px 0px 0px 0px;
+  font-weight: 500;
   text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #9d9d9d;
+  margin: 0;
 }
 
 ul li {
-  border: 1px;
+  border: 0px;
   margin-top: -1px; /* Prevent double borders */
-  padding: 12px; /* Add some padding */    
+  padding: 0px; /* Add some padding */    
 }
 
 .block {
@@ -70,42 +82,57 @@ ul li {
   display: block;
   background-color: #202022;
   border: 4px;
-  margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 8px;
+  width: 600px;
 }
 
 .block h2 {
-  margin-bottom: 2px;
-  margin-top: 5px;
-  font-size: 13px;
+  font-size: 10px;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-weight: 650;
   font-style: normal;
-  color: #c8c8c8;
-  letter-spacing: 1.3px;
+  color: #ffffff;
+  letter-spacing: 3.5px;
 }
 
 .h33 {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 25px;
+  font-size: 24px;
   color: #ffffff;
-  margin-top: 5px;
+  margin-top: 8px;
 }
-
+.block-link{
+  text-decoration: none;
+}
 .block:hover {
   background: #3e3e3e;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(35, 35, 35, 0.57);
-  box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+  transform: translateY(-8px);
   transition: all .5s ease 0s;
 }
-
+.link-project{
+  text-decoration: none;
+  font-size: 10px;
+  color: #ffffff;
+  letter-spacing: 2.5px;
+}
 .about {
   justify-content: left;
-  padding-right: 50px;
-}
+  padding-right: 150px;
 
+  margin: 32px 0px 0px;
+  line-height: 30px;
+}
+hr{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px; /* Adjust spacing between hr and text */
+  border: none; /* Remove default border */
+  border-top: 1px solid #ffffff; /* Add top border */
+  width: 30px; /* Ensure hr spans full width */
+}
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -113,30 +140,28 @@ p {
   font-size: 15px;
   color: #9d9d9d;
 }
-
 .footer {
   margin: 2px;
   padding: 1px;
   height: 120px;
   display: flex;
   flex-direction: row;
-  padding-top: 40px;
+  padding-top: 0px;
   padding-right: 100px;
   align-items: flex-end;
   width: 650px;
   justify-content: space-between;
 }
 .image{
- padding-right: 100px;
+ padding-right: 0px;
 }
 .image img {
-  height: 80px;
-  width: 80px;
+  height: 96px;
+  width: 96px;
   border-radius: 50%;
 }
 .linkedin{
-  display: inline;
-  width: 100px;
+  width: 200px;
 }
 .linkedin img{
   height:32px;
@@ -144,12 +169,20 @@ p {
   padding-top: 40px;
 }
 .git img{
-  height:32px;
+  height: 32px;
   width: 32px;
 }
 .social{
   color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-style: normal;
+  vertical-align: middle;
+}
+.link{
   text-decoration: none;
+  display: inline-block;
 }
 .roboto-thin {
   font-family: "Roboto", sans-serif;

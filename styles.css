@@ -5,22 +5,29 @@ body {
 
   .main-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
   /* Responsive layout - makes a one column layout instead of a two-column layout */
-  @media(max-width:80px){
-    .left-block, .right-block{
-        flex:100%;
+  @media(max-width:900px){
+    .main-container{
+      flex-wrap: wrap;
     }
   }
+  
 /* LEFT-BLOCK */
 .left-block{
     text-align: left;
-    flex:50%;
+    position: fixed;
+    width: 50%;
+    padding: 32px 0px 10px 100px;
 }
 .right-block {
     scrollbar-width: none; /* For Firefox */
-    flex: 50%;
+    width: 50%;
+    right: 0;
+    position: absolute;
+    padding: 88px 0px 70px;
   }
   .name{
     font-family: "Roboto", sans-serif;
@@ -40,11 +47,34 @@ body {
     line-height: 30px;
   }
   .link-project{
+  list-style-type: none;
+  font-size: 45px;
+  padding: 0px 0px 0px 0px;
+  font-weight: 500;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #9d9d9d;
+  margin: 0;
+}
+.navigation:hover .link-project{
+  opacity:.6;
+}
+.navigation:hover .link-project:hover{
+  opacity: 1;
+}
+  .link-project a{
     text-decoration: none;
     font-size: 10px;
+    font-weight: 550;
     color: #ffffff;
     letter-spacing: 2.5px;
   }
+  .link-project:hover {
+    transform: scale(1.09);
+    transition: all .2s ease-in-out;
+  }
+  .navigation
   hr{
     display: inline-block;
     vertical-align: middle;
@@ -70,23 +100,17 @@ body {
   }  
   .footer {
     margin: 2px;
-    padding: 1px;
-    height: 120px;
+    padding-bottom: 10px;
+    height: 200px;
     display: flex;
     flex-direction: row;
-    padding-top: 0px;
-    padding-right: 100px;
     align-items: flex-end;
-    width: 650px;
+    width: 500px;
     justify-content: space-between;
-  }
-  .linkedin{
-    width: 200px;
   }
   .linkedin img{
     height:32px;
     width: 32px;
-    padding-top: 40px;
   }
   .git img{
     height: 32px;
@@ -95,14 +119,15 @@ body {
   .social{
     color: #ffffff;
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
+    font-weight: 400;
     letter-spacing: 1px;
     font-style: normal;
-    vertical-align: middle;
+    padding-left: 10px;
   }
   .link{
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
   }
 /* RIGHT-BLOCK*/
   
@@ -115,18 +140,19 @@ body {
     justify-content: center;
     margin-bottom: 8px;
     width: 600px;
+
   }
   .block h2 {
     font-size: 10px;
     font-family: "Roboto", sans-serif;
-    font-weight: 650;
+    font-weight: 600;
     font-style: normal;
     color: #ffffff;
-    letter-spacing: 3.5px;
+    letter-spacing: 2.5px;
   }
   .h33 {
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-size: 24px;
     color: #ffffff;
@@ -136,22 +162,16 @@ body {
     text-decoration: none;
   }
   .block:hover {
-    background: #3e3e3e;
-    transform: translateY(-8px);
-    transition: all .5s ease 0s;
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.616)); 
   }
-ul {
-    list-style-type: none;
-    font-size: 45px;
-    padding: 0px 0px 0px 0px;
-    font-weight: 500;
-    text-align: left;
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    color: #9d9d9d;
-    margin: 0;
+  .right-block:hover .block{
+    opacity:.6;
   }
-  
+  .right-block:hover .block:hover{
+    opacity: 1;
+  }
 ul li {
     border: 0px;
     margin-top: -1px; /* Prevent double borders */

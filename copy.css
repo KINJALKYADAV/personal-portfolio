@@ -1,0 +1,30 @@
+
+  .left-block {
+    padding: 10px 70px 88px 90px;
+    text-align: left;
+    margin: 1px;
+    margin-right: 5px;
+    position: absolute;
+    width: 650px; /* Adjust this width as needed */
+  }
+  .right-block {
+    margin-left: 700px; /* Adjust this width to match the left-block width */
+    height: 100vh;
+    overflow-y: scroll;
+    padding-top: 60px;
+    padding-right: 32px;
+    display: flex;
+    flex-direction: column;
+    width: 750px; /* Adjust this width to match the left-block width */
+  }
+  
+  /* For Webkit browsers (Chrome, Safari) */
+  .right-block::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Optional: just to hide the scrollbar but still visible scrolling area */
+  }
+  
+  /* For Internet Explorer and Edge */
+  .right-block {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }

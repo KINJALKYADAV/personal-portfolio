@@ -20,7 +20,7 @@ body {
     text-align: left;
     position: fixed;
     width: 50%;
-    padding: 32px 0px 10px 100px;
+    padding: 32px 72px 32px 100px;
 }
 .right-block {
     scrollbar-width: none; /* For Firefox */
@@ -71,10 +71,9 @@ body {
     letter-spacing: 2.5px;
   }
   .link-project:hover {
-    transform: scale(1.09);
+    transform: scaleY(1.09);
     transition: all .2s ease-in-out;
   }
-  .navigation
   hr{
     display: inline-block;
     vertical-align: middle;
@@ -90,37 +89,43 @@ body {
     font-size: 15px;
     color: #9d9d9d;
   }
-  .image{
-    padding-right: 0px;
-  } 
+  ul{
+    justify-content: left;
+    padding: 0px;
+    padding-inline-start: 0;
+  }
+  ul li {
+    border: 0px;
+    margin-top: -1px; /* Prevent double borders */
+    padding: 0px; /* Add some padding */    
+  }
   .image img {
-    height: 96px;
-    width: 96px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
   }  
   .footer {
-    margin: 2px;
-    padding-bottom: 10px;
-    height: 200px;
+    height: 150px;
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    margin-top: 72px;
     width: 500px;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
-  .linkedin img{
-    height:32px;
-    width: 32px;
+  .icon{
+    height:26px;
+    width: 26px;
   }
-  .git img{
-    height: 32px;
-    width: 32px;
+  .newtab{
+    height: 15px;
+    width: 15px;
+    padding-left: 5px;
   }
   .social{
     color: #ffffff;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 1.3px;
     font-style: normal;
     padding-left: 10px;
   }
@@ -128,6 +133,7 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
+    padding-left: 40px;
   }
 /* RIGHT-BLOCK*/
   
@@ -163,8 +169,7 @@ body {
   }
   .block:hover {
     transform: scale(1.1);
-    transition: all .2s ease-in-out;
-    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.616)); 
+    transition: all .2s ease-in-out; 
   }
   .right-block:hover .block{
     opacity:.6;
@@ -172,13 +177,21 @@ body {
   .right-block:hover .block:hover{
     opacity: 1;
   }
-ul li {
-    border: 0px;
-    margin-top: -1px; /* Prevent double borders */
-    padding: 0px; /* Add some padding */    
+  .profiles{
+    display: flex;
+    flex-direction: column;
   }
-  
-
+  .by{
+    text-align: center;
+    margin-right: 160px;
+    margin-top: 30px;
+    font-size: 12px;
+    opacity: .75;
+  }
+.by span{
+  color: #ffffff;
+  text-decoration: underline;
+}
  
   .roboto-thin {
     font-family: "Roboto", sans-serif;

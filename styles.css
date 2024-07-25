@@ -1,6 +1,7 @@
 body {
-    background-color: #151515;
+    background-color: #111119;
     box-sizing: border-box;
+
   }
 
   .main-container {
@@ -9,28 +10,37 @@ body {
     flex-wrap: nowrap;
   }
   /* Responsive layout - makes a one column layout instead of a two-column layout */
-  @media(max-width:900px){
+  @media(max-width:992px){
     .main-container{
+      flex-direction: column;
       flex-wrap: wrap;
     }
+  }
+  @media(min-width:992px) {
+    .main-container{
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    
   }
   
 /* LEFT-BLOCK */
 .left-block{
     text-align: left;
-    position: fixed;
     width: 50%;
     padding: 32px 72px 32px 100px;
+    position: fixed;
 }
 .right-block {
-    scrollbar-width: none; /* For Firefox */
     width: 50%;
-    right: 0;
-    position: absolute;
     padding: 88px 0px 70px;
+    right: 0;
+    scrollbar-width: none;
+    position: absolute;
+
   }
   .name{
-    font-family: "Roboto", sans-serif;
+    font-family: "IBM Plex Mono", monospace;
     font-weight: 600;
     font-style: normal;
     font-size: 60px;
@@ -52,7 +62,7 @@ body {
   padding: 0px 0px 0px 0px;
   font-weight: 500;
   text-align: left;
-  font-family: "Roboto", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-style: normal;
   color: #9d9d9d;
   margin: 0;
@@ -65,9 +75,10 @@ body {
 }
   .link-project a{
     text-decoration: none;
-    font-size: 10px;
-    font-weight: 550;
-    color: #ffffff;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 650;
+    color: #D5D6DA;
     letter-spacing: 2.5px;
   }
   .link-project:hover {
@@ -83,11 +94,11 @@ body {
     width: 30px; /* Ensure hr spans full width */
   }
   p {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 490;
     font-style: normal;
-    font-size: 15px;
-    color: #9d9d9d;
+    font-size: 14px;
+    color: #A1A1AA;
   }
   ul{
     justify-content: left;
@@ -100,15 +111,15 @@ body {
     padding: 0px; /* Add some padding */    
   }
   .image img {
-    height: 70px;
-    width: 70px;
+    height: 85px;
+    width: 85px;
     border-radius: 50%;
   }  
   .footer {
     height: 150px;
     display: flex;
     flex-direction: row;
-    margin-top: 72px;
+    margin-top: 40px;
     width: 500px;
     justify-content: flex-start;
   }
@@ -123,8 +134,8 @@ body {
   }
   .social{
     color: #ffffff;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 450;
     letter-spacing: 1.3px;
     font-style: normal;
     padding-left: 10px;
@@ -141,27 +152,31 @@ body {
     height: fit-content;
     padding: 40px;
     display: block;
-    background-color: #202022;
-    border: 5px;
+    border: 1px;
+    border-style: solid;
+    border-color: #00FF95;
+    background-color: #111119;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 10.2px;
     width: 600px;
 
   }
   .block h2 {
     font-size: 10px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 450;
     font-style: normal;
     color: #ffffff;
     letter-spacing: 2.5px;
   }
   .h33 {
-    font-family: "Roboto", sans-serif;
+    font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
     font-style: normal;
-    font-size: 24px;
-    color: #ffffff;
+    font-size: 22px;
+    line-height: 1.25;
+    color: #D5D6DA;
+    
     margin-top: 8px;
   }
   .block-link{
@@ -193,102 +208,3 @@ body {
   text-decoration: underline;
 }
 
-
-/*---FORM---*/
-form{
-  border: #202022;
-  border-style: solid;
-  border-width: 1px;
-  background-color: #000000;
-  color: #b7b7b7;
-  
-}
-
-form textarea, form input{
-  width: 100%;
-  padding: 14px;
-  background: var(--bg-color);
-  color: var(--text-color);
-  border-bottom: #b7b7b7;
-  outline: none;
-  font-size: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
- 
-  .roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-    color: #9d9d9d;
-  }
-  
-  .roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 60px;
-    letter-spacing: 1.9px;
-  }
-  
-  .roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .roboto-black {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
